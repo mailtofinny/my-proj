@@ -1,0 +1,16 @@
+<div>
+  <h2>Project Mappings</h2>
+  <ul class="heroes">
+    <li *ngFor="#projectmapping of projectmappings"
+      [class.selected]="projectmapping === selectedProjectMapping"
+      (click)="onSelect(projectmapping)">
+      {{projectmapping.won}}
+	  <span class="badge">{{projectmapping.empnum}}</span> {{projectmapping.name}}
+	  
+    </li>
+  </ul>
+  <div *ngIf="selectedProjectMapping">
+    <h2>{{selectedProjectMapping.name | uppercase}} is currently selected</h2>
+    <button (click)="gotoDetail()">View Details</button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div *ngIf="projectmapping">
+	<h2>{{projectmapping.name}}'s Project Mapping details!</h2>
+		<div>
+		<label>WON: </label>{{projectmapping.won}}
+		</div>
+	<div>
+		<label>Emp Name: </label>
+		<input [(ngModel)]="projectmapping.name" placeholder="Employee Name"/>
+	</div>
+		<div>
+		<label>Bill Rate: </label>
+		<input [(ngModel)]="projectmapping.billrate" placeholder="Bill Rate"/>
+	</div>
+	<div>
+		<label>Start Date: </label>
+		<input [(ngModel)]="workorder.startdt" placeholder="Work Start Date"/>
+	</div>
+	<div>
+		<label>End Date: </label>
+		<input [(ngModel)]="workorder.enddt" placeholder="Work End Date"/>
+	</div>		
+	<button (click)="goBack()">Back</button>
+</div>

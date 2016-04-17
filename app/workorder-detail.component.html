@@ -1,0 +1,36 @@
+<div *ngIf="hero">
+	<h2>{{workorder.name}} details!</h2>
+	<div>
+		<label>WON: </label>{{workorder.id}}</div>
+	<div>
+		<label>Name: </label>
+		<input [(ngModel)]="workorder.name" placeholder="Work Order Name"/>
+	</div>
+	<div>
+		<label>Start Date: </label>
+		<input [(ngModel)]="workorder.startdt" placeholder="Work Start Date"/>
+	</div>
+	<div>
+		<label>End Date: </label>
+		<input [(ngModel)]="workorder.enddt" placeholder="Work End Date"/>
+	</div>
+	<div>
+		<label>Location: </label>
+		<input [(ngModel)]="workorder.location" placeholder="Work Location"/>
+	</div>
+		<div>
+		<label>Service Practise: </label>
+		<input [(ngModel)]="workorder.sp" placeholder="Service Practise"/>
+	</div>
+		<div>
+		<label>Working Days: </label>
+		<input [(ngModel)]="workorder.workingdays" placeholder="Working Days"/>
+	</div>
+	<button (click)="goBack()">Back</button>
+</div>
+
+<!-- 
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

@@ -1,0 +1,14 @@
+<div>
+  <h2>List of Active Work Orders</h2>
+  <ul class="workorders">
+    <li *ngFor="#workorder of workorders"
+      [class.selected]="workorder === selectedWorkOrder"
+      (click)="onSelect(workorder)">
+      <span class="badge">{{workorder.id}}</span> {{workorder.name}}
+    </li>
+  </ul>
+  <div *ngIf="selectedWorkOrder">
+    <h2>{{selectedWorkOrder.name | uppercase}} is currently selected</h2>
+    <button (click)="gotoDetail()">View Details</button>
+  </div>
+</div>
